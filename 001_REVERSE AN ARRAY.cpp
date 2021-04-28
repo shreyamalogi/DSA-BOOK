@@ -1,5 +1,5 @@
 
-//reverse an array without using STL
+//reverse an array without using STL.
 //author :shreyamalogi
 
 #include<bits/stdc++.h>
