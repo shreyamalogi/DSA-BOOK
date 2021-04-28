@@ -14,20 +14,30 @@ int main()
 	 	int n,m;
 	 	cin>>n>>m;
 	 	int a[n],b[n],i;
-	 	set<int>s;
+	 	
+	 	unordered_map<int,int>map; //cuz map contains distinct values which is our ultimate goal for this problem
+	 	
 	 	for(i=0; i<n; i++)
 	 	{
 	 		cin>>a[i];
-	 		s.insert(a[i]);
+	 		map[a[i]]++;
 		 }
 		 
 		for(i=0;i<m;i++)
 		{
 			cin>>b[i];
-			s.insert(b[i]);
+			map[b[i]]++;
 		 } 
-		 cout<<s.size()<<endl;
+		 cout<<map.size()<<endl;  //we can simply print the size which is the answer of the question
 	 }
      return 0;
 }
+
+//2
+//5 3
+//1 2 3 4 5
+//1 2 3
+
+//5
+
 
