@@ -25,7 +25,7 @@ int main()
 	 		cs=max(cs+a[i],a[i]); //current sum will be maximum of ce or ce +cs
 	 		cs=max(ms,cs);         //maximum element will be max of max sum or current sum
 		 }
-		 cout<<ms<<endl;  //print max sum,
+		 cout<<ms<<endl;  //print max sum
 	 }
      return 0;
 }
