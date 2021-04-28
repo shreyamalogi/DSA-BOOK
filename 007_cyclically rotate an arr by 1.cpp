@@ -20,12 +20,12 @@ int main()
      
      int last =a[n-1];
      
-     for(i=n-2; i>=0; --i)
+     for(i=n-2; i>=0; --i)  //prev val to next val
      {
      	a[i+1]=a[i];
 	 }
 	 
-	 a[0]=last;
+	 a[0]=last; //because a of last should come to first place
 	 
 	 //print
 	 for(i=0; i<n; i++)
@@ -35,4 +35,8 @@ int main()
      return 0;
      
 }
+
+//2 5
+//1 2 3 4 5
+//5 1 2 3 4
 
