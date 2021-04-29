@@ -1,8 +1,13 @@
 //author :shreyamalogi
 
+//time complexity--o(NlogN)
+//SPACE Complexity--o(N)
+
 #include<bits/stdc++.h>
 
 using namespace std;
+
+
 
 int main()
 {
