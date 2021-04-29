@@ -2,7 +2,9 @@
 
 //q11, find the duplicates of N+1 array
 
-//time complexity o(
+//time complexity o(n)
+//space complexity o(1)
+
 #include<bits/stdc++.h>
 
 using namespace std;
