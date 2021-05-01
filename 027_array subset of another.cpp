@@ -4,6 +4,9 @@
 //we actually have 4 methods of approach
 //but im using hashing unordered map approach cuz its optimized way but this maping i think we acnt use in interviews
 
+//tc: o(n)
+//sc: o(n)
+
 #include<bits/stdc++.h>
 
 using namespace std;
