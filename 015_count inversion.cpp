@@ -3,6 +3,17 @@
 //merge sort approach
 //divide and conquer algo which takes n(logn) time
 
+//brute force:
+// int inv=0;
+// for(int i=0;i<n;i++){
+// 	for(int j=i+1;j<n;j++){
+// 		if(a[i]>a[j])
+// 			inv++;
+// 	}
+// }
+// cout<<inv;  
+//tc: o(n^2)
+
 
 #include<bits/stdc++.h>
 
