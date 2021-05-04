@@ -6,53 +6,60 @@ using namespace std;
 
 int main()
 {
-	int tt;
-	cin>>tt;
-	while(tt--)
+	int n,m;
+	cin>>n>>m;
+	
+	int a[n][m];
+	for(int i=0;i<n;i++)
 	{
-		int n,m;
-		cin>>n>>m;
-		
-		int mat[n][m],i,j;
-		for(i=0;i<n;i++)
+		for(int j=0;j<m;j++)
 		{
-			for(j=0;j<m;j++)
-			{
-				cin>>mat[i][j];
-			}
-		}
-		
-		//take variables
-		int k,l;
-		k=0;l=0;
-		
-		while(k<n && l<m)
-		{
-			for(i=1;i<m;i++)       //top
-			cout<<mat[k][i]<<" ";
-			k++;
-			
-			for(int i=k;i<n;i++)	//right
-			cout<<mat[i][m-1]<<" ";
-			m--;
-			
-			if(k<n)				
-			{
-				for(i=m-1;i>=l;i--)		//bottom
-					cout<<mat[n-1][i]<<" ";
-					m--;
-			}
-			
-			if(l<m)
-			{
-				for(i=n-1;i>=k;i++)
-					cout<<mat[i][l]<<" ";
-					l++;
-			}
+			cin>>a[i][j];
 		}
 	}
 	
+	//spiral order print
+	int row_start=0, row_end=n-1, col_start=0, col_end=m-1;  //initializing
 	
-     return 0;
+	while(row_start<=row_end && col_start<=col_end)
+	{
+		//for row start
+		for(int col = col_start; col<=col_end; col++)
+			cout<<a[row_start][col]<<" ";
+			row_start++;
+			
+		//for column end
+		for(int row=row_start;row<=row_end;row++)
+            cout<<a[row][col_end]<<"  ";
+        	col_end--;
+        	
+        	
+     	if(row_start<=row_end)
+    	{
+        for(int col=col_end;col>=col_start;col--)
+            cout<<a[row_end][col]<<"  ";
+    	}	
+        row_end--;
+
+  		if(col_start<=col_end)
+    	{
+
+        for(int row=row_end;row>=row_start;row--)
+        {
+            cout<<a[row][col_start]<<"  ";
+    	}
+        col_start++;  
+    	}
+    	
+    	
+		return 0;
+	}
+	
 }
 
+//4 4
+//1 2 3 4
+//5 6 7 8
+//9 10 11 12
+//13 14 15 16
+//1 2 3 4 8  12  16  15  14  13  9  5  6 7 11
