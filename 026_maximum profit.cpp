@@ -1,6 +1,6 @@
 //author :shreyamalogi
 
-//Maximum profit by buying and selling a share at most twice
+//Maximum profit by buying and selling a share at most twice.
 
 
 
