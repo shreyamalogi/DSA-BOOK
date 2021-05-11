@@ -15,8 +15,6 @@
 
 //check from last....the if dp[0] = 1 it means we can make the entire string
 
-
-
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -33,6 +31,7 @@ int main()
 		
 		string s;
 		
+		
 		unordered_set<string> st;
 		for(int i=0;i<n;i++){
 			cin>>dict[i];		//while accepeting the input , insert it into the set
@@ -40,6 +39,7 @@ int main()
 		}
 		
 		cin>>s;
+		int n=s.length();
 		
 		//now take a dp array which is gonna be a boolean array only
 		int dp[n+1];
@@ -58,10 +58,12 @@ int main()
 					}
 				}
 			}
-			if (dp[0])
-				cout<<"yes"<<endl;
-			else
-				cout<<"no"<<endl;
+//			if (dp[0])
+//				cout<<"yes"<<endl;
+//			else
+//				cout<<"no"<<endl;
+
+		cout<<dp[0]<<endl;
 		
 	}
      return 0;
@@ -75,3 +77,4 @@ int main()
 //A = "ilike"
 //Output: 1
 //Explanation:The string can be segmented as "i like".
+
