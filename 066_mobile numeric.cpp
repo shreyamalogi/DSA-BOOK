@@ -4,7 +4,7 @@
 
 // make an array of size 26 and store all the patters eg: 2 , 22, 222, untill 9999
 
-//arr[ch='A'] + '0'
+//arr[ch='A'] + '0'.
 
 //basic hashing problem
 
