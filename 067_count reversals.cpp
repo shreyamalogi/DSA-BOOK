@@ -5,7 +5,7 @@
 
 
 //already done this prob in parenthesis
-//same thing
+//same thing.
 
 #include<bits/stdc++.h>
 
