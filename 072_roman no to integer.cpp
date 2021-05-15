@@ -1,11 +1,6 @@
 //author :shreyamalogi
 //roman no to integer
 
-/*
-
-
-
-*/
 
 
 #include<bits/stdc++.h>
