@@ -51,7 +51,7 @@ int main()
                     "9","99","999","9999"
                    };
  
-    string input = "GEEKSFORGEEKS";
+    string input = "STARGIRLSHREYA";
     cout << printSequence(str, input);
     return 0;
 }
