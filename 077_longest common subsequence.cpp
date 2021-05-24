@@ -2,7 +2,7 @@
 
 /*
 
-check the last charecters for bothe string if they are equal the recursively call
+check the last charecters for bothe string if they are equal the recursively call.
 
 */
 
