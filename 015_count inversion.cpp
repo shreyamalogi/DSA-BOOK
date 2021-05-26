@@ -1,18 +1,35 @@
 //author :shreyamalogi
 
-//merge sort approach
-//divide and conquer algo which takes n(logn) time
+/*
 
-//brute force:
-// int inv=0;
-// for(int i=0;i<n;i++){
-// 	for(int j=i+1;j<n;j++){
-// 		if(a[i]>a[j])
-// 			inv++;
+basically batana hai ki hamara ye jo array hai kitna dur hai isko sort hone se
+so i<j and ai<=aj
+
+in an array of 5 4 1 2 3
+the inversions are : (5,4) (5,1) (5,2) (5,3)
+					(4,1) (4,2) (4,3)
+total inversions are 7
+
+*/
+
+
+//brute force: ek element ko pakad aur last tk jaa
+// int count=0;
+// for(int i=0;i<n;i++){ 		//0 to n
+// 	for(int j=i+1;j<n;j++){ 	//i+1 to n
+// 		if(a[i]>a[j]) 			//strictly greater
+// 			count++;
 // 	}
 // }
-// cout<<inv;  
+// cout<<count;  
 //tc: o(n^2)
+//sc: o(1)
+
+
+
+//OPTIMIZED
+//merge sort approach
+//divide and conquer algo which takes n(logn) time
 
 
 #include<bits/stdc++.h>
@@ -44,7 +61,9 @@ void merge(long long int a[], long long int l, long long int m, long long int r)
 		}
 		else
 		{
-			ans+=n1-i; //imp step/ extra line (if left subarray is greater than the right subarray then there will be n-1 inversion or we have to store the count everytime
+			//imp step/ extra line (if left subarray is greater than the right subarray
+			// then there will be n-1 inversion or we have to store the count everytime
+			ans+=n1-i; 	
 			a[k++]=R[j++];
 		}
 	}
@@ -57,14 +76,14 @@ void merge(long long int a[], long long int l, long long int m, long long int r)
 	
 }
 
-void mergesort(long long int a[], long long int l, long long int r)// merge sort function req 3 parameters - an array, lower bound ,upper bound
+void mergesort(long long int a[], long long int l, long long int r)	// merge sort function req 3 parameters - an array, lower bound ,upper bound
 {
 	if(l<r)
 	{
 		long long int mid= l+(r-1)/2 ;  //mid, to avoid integer overflow
 		mergesort(a,l,mid);   
 		mergesort(a,mid+1,r);
-		merge(a,l,mid,r);    //final merge 
+		merge(a,l,mid,r);   		 //final merge 
 	}
 }
 int main()
