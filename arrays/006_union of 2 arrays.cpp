@@ -1,5 +1,15 @@
 //author :shreyamalogi
-//find the union and intersection of 2 sorted arrays
+
+/*
+we actually need to considerv a data structure which dont allow duplicates so we take a set
+ordered set will increse the time complexity so we are taking unordered set
+we can use merge function: tc: o(m+n)
+
+
+*/
+
+
+//find the union and  of 2 sorted arrays
 
 #include<bits/stdc++.h>
 
