@@ -1,1 +1,1 @@
-# 100 days of data strutures and algorithms with 500 questions to solve
+# 30 days of data strutures and algorithms with 100 questions to solve
