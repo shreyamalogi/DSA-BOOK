@@ -4,20 +4,22 @@
 //so we will keep 3 variables which counts occurence of 1 2 and 3
 //time complexity O(n) because we will be counting how many ones how many twos ....will be there and then fill the array accordingly
 
+// { Driver Code Starts
 #include<bits/stdc++.h>
-
 using namespace std;
 
-int main()
+
+
+ // } Driver Code Ends
+class Solution
 {
-  int n; cin>>n;
-  
-  int a[n],i;
-  for(i=0; i<n; i++);  cin>>a[i];
-   
-    
-    //init 3 count variables to 0
-    int c0=0,c1=1,c2=2;
+    public:
+    void sort012(int a[], int n)
+    {
+
+   // we need 3 variables for counting 0 1 and 2
+       int c0=0,c1=0,c2=0;
+       int i=0;
     
     //use a loop till n and check conditions take array conditions and increment the respective counters
     for(i=0;i<n;i++){
@@ -44,13 +46,41 @@ int main()
 			a[i]=2;
 		}
 	}
-    
+ 
+}
 
-  for(i=0; i<n; i++) cout<<a[i]<<" ";
     
+};
+
+// { Driver Code Starts.
+int main() {
+
+    int t;
+    cin >> t;
+
+    while(t--){
+        int n;
+        cin >>n;
+        int a[n];
+        for(int i=0;i<n;i++){
+            cin >> a[i];
+        }
+
+        Solution ob;
+        ob.sort012(a, n);
+
+        for(int i=0;i<n;i++){
+            cout << a[i]  << " ";
+        }
+
+        cout << endl;
+        
+        
+    }
     return 0;
 }
 
+  // } Driver Code Ends
 
 
 //5
